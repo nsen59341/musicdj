@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebAppDJ - Music App</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Tone.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/tone@latest/build/Tone.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>WebAppDJ</h1>
+      <p>Create, play, and experiment with music!</p>
+    </header>
+    <main>
+      <section id="controls"></section>
+        <section id="sequencer">
+          <h2>Sequencer</h2>
+          <div id="sequencer-grid"></div>
+            <div id="pattern-editor">
+              <h3>Pattern Editor</h3>
+              <div id="pattern-grid"></div>
+            </div>
+          <div id="sequencer-controls"></div>
+        </section>
+      <section id="visualizer"></section>
+    </main>
+    <footer>
+      <button id="savePreset">Save Preset</button>
+      <button id="loadPreset">Load Preset</button>
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
