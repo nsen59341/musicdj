@@ -15,17 +15,28 @@
       <p>Create, play, and experiment with music!</p>
     </header>
     <main>
-      <section id="controls"></section>
-        <section id="sequencer">
-          <h2>Sequencer</h2>
-          <div id="sequencer-grid"></div>
-            <div id="pattern-editor">
-              <h3>Pattern Editor</h3>
-              <div id="pattern-grid"></div>
-            </div>
-          <div id="sequencer-controls"></div>
-        </section>
-      <section id="visualizer"></section>
+      <section id="controls" class="control-panel">
+        <h2>Controls</h2>
+        <div id="transport-controls"></div>
+        <div id="tempo-control"></div>
+      </section>
+      
+      <section id="sequencer" class="sequencer-panel">
+        <h2>Step Sequencer</h2>
+        <div class="sequencer-container">
+          <div id="synth-labels" style="display: none;"></div>
+          <div id="step-grid"></div>
+        </div>
+        <div class="settings-container">
+          <h3>Sequencer Settings</h3>
+          <div id="sequencer-controls" class="sequencer-controls"></div>
+        </div>
+      </section>
+
+      <section id="visualizer" class="visualizer-panel">
+        <h2>Visualizer</h2>
+        <div id="visual-display"></div>
+      </section>
     </main>
     <footer>
       <button id="savePreset">Save Preset</button>

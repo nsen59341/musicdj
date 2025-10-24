@@ -1,54 +1,178 @@
+/* Main layout */
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: #181818;
-  color: #fff;
-  margin: 0;
-  padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #1a1a1a;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
 }
+
 #app {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
 }
+
+/* Header */
 header {
-  text-align: center;
-  margin-bottom: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
 }
-main {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+
+/* Control Panel */
+.control-panel {
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
-section {
-  background: #222;
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+
+.control-button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
 }
+
+.control-button:hover {
+    background: #45a049;
+}
+
+/* Sequencer */
+.sequencer-panel {
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.sequencer-container {
+    background: #222;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+/* Step numbers row */
+.step-numbers {
+    display: flex;
+    gap: 5px;
+    margin: 0 0 15px 100px; /* Align with buttons */
+    padding-bottom: 10px;
+    border-bottom: 1px solid #444;
+}
+
+.step-number {
+    width: 40px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-size: 12px;
+}
+
+/* Instrument rows */
+.step-row {
+    display: flex;
+    gap: 5px;
+    margin: 10px 0;
+    align-items: center;
+}
+
+.row-label {
+    width: 90px;
+    padding: 5px 10px;
+    background: #333;
+    border-radius: 4px;
+    margin-right: 10px;
+    text-align: right;
+    font-size: 14px;
+    color: #fff;
+}
+
+.step-button {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #444;
+    border-radius: 4px;
+    background: #333;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.step-button:hover {
+    background: #3a3a3a;
+    border-color: #555;
+}
+
+.step-button.active {
+    background: #4CAF50;
+    border-color: #45a049;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+}
+
+.step-button.current {
+    border-color: #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.step-button.active {
+    background: #4CAF50;
+}
+
+.step-button.current {
+    border: 2px solid #fff;
+}
+
+/* Visualizer */
+.visualizer-panel {
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#visual-display {
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+/* Footer */
 footer {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 2rem;
+    text-align: center;
+    margin-top: 20px;
 }
-button {
-  background: #ff4081;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  padding: 0.5rem 1.5rem;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.2s;
+
+footer button {
+    background: #2196F3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
 }
-button:hover {
-  background: #e91e63;
+
+footer button:hover {
+    background: #1976D2;
 }
+
+/* Responsive design */
 @media (max-width: 600px) {
-  #app {
-    padding: 1rem;
-  }
-  main {
-    gap: 1rem;
-  }
+    body {
+        padding: 10px;
+    }
+    
+    .step-button {
+        width: 30px;
+        height: 30px;
+    }
 }
